@@ -32,6 +32,9 @@ function load() {
             if (column == "hobbies") {
               return `<td>${hobbie}</td>`;
             }
+            if (column == "gender") {
+              return `<td>${item['gender'] == 1 ? 'Nam' : 'Nữ'}</td>`;
+            }
             return `<td>${item[column]}</td>`;
           }).join("\n")}
         </tr>`;
