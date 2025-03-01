@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm công viêc</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+
+<body>
+
+    <div>
+        <form id="fromJob">
+            <div>
+                <label for="fname">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Title" required="true">
+            </div>
+            <div>
+                <label for="lname">StartDate:</label>
+                <input type="date" id="startDate" name="startDate" placeholder="StartDate" required="true">
+            </div>
+            <div>
+                <label for="lname">EndDate:</label>
+                <input type="date" id="endDate" name="endDate" placeholder="endDate" required="true">
+            </div>
+            <div>
+                <label for="cars">Category</label>
+                <select name="category" id="category" required="true">
+                    <option value="Học tập">Học tập</option>
+                    <option value="Làm việc">Làm việc</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+
+        <table>
+            <tr>
+                <td width="200">Title</td>
+                <td width="200">StartDate -> endDate</td>
+                <td width="200">Category</td>
+            </tr>
+            <tbody id="listJob">
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="./asset/js/bai1.js"></script>
+</body>
+
+</html>
