@@ -16,10 +16,17 @@ function load() {
   listApp.forEach((item) => {
     document.getElementById("listJob").innerHTML += `
             <tr>
-                <td>${item.title}</td>
-                <td>${item.startDate} -> ${item.endDate}</td>
-                <td>${item.category}</td>
+            ${columns.map((column) => {
+              if(column == 'startDate') {
+                return `<td>${item.startDate} -> ${item.endDate}</td>`;
+              }
+              if( column == 'endDate') {
+                return ''
+              }
+              return `<td>${item[column]}</td>`;
+            }).join("\n")}
             </tr>
         `;
   });
 }
+           

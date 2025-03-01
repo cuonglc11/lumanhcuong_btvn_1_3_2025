@@ -10,31 +10,30 @@ document.getElementById("fromUser").addEventListener("submit", function (e) {
   listUser.push(data);
   load();
   document.getElementById("fromUser").reset();
-
 });
 function load() {
   document.getElementById("listUser").innerHTML = "";
   listUser.forEach((item) => {
-    let hobbie = '';
+    let hobbie = "";
     switch (Number(item.hobbies)) {
-        case 1:
-            hobbie = "Nghe nhạc";
-            break;
-        case 2: 
-            hobbie = "ăn uống";
-            break;
-        default:
-            break;
+      case 1:
+        hobbie = "Nghe nhạc";
+        break;
+      case 2:
+        hobbie = "ăn uống";
+        break;
+      default:
+        break;
     }
     document.getElementById("listUser").innerHTML += `
         <tr>
-            <td>${item.name}</td>
-            <td>${item.email}</td>
-            <td>${item.phone}</td>
-            <td>${item.age}</td>
-            <td>${item.gender == 1 ? "Nam" : "Nữ"}</td>
-            <td>${hobbie}</td>
-        </tr>
-        `;
+        ${columns
+          .map((column) => {
+            if (column == "hobbies") {
+              return `<td>${hobbie}</td>`;
+            }
+            return `<td>${item[column]}</td>`;
+          }).join("\n")}
+        </tr>`;
   });
 }
