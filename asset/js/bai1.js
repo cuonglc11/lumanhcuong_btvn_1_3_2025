@@ -1,6 +1,6 @@
 const listApp = [];
 const columns = ["title", "startDate", "endDate", "category"];
-document.getElementById("fromJob").addEventListener("submit", function (e) {
+document.getElementById("formJob").addEventListener("submit", function (e) {
   e.preventDefault();
   const from = new FormData(e.target);
   const data = {};
@@ -9,7 +9,7 @@ document.getElementById("fromJob").addEventListener("submit", function (e) {
   })
   listApp.push(data);
   load();
-  document.getElementById("fromJob").reset();
+  document.getElementById("formJob").reset();
 });
 function load() {
   document.getElementById("listJob").innerHTML = "";

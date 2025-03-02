@@ -35,7 +35,7 @@ input[type="submit"] {
     border: 1px solid #7F56D9;
     border-radius: 8px;
 }
-#fromJob , #fromUser {
+#formJob , #formUser {
   max-width: 1200px;
   margin: 0 auto;
   display: grid

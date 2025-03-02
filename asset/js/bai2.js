@@ -1,6 +1,6 @@
 const columns = ["name", "email", "phone", "age", "gender", "hobbies"];
 const listUser = [];
-document.getElementById("fromUser").addEventListener("submit", function (e) {
+document.getElementById("formUser").addEventListener("submit", function (e) {
   e.preventDefault();
   const from = new FormData(e.target);
   const data = [];
@@ -9,7 +9,7 @@ document.getElementById("fromUser").addEventListener("submit", function (e) {
   });
   listUser.push(data);
   load();
-  document.getElementById("fromUser").reset();
+  document.getElementById("formUser").reset();
 });
 function load() {
   document.getElementById("listUser").innerHTML = "";
